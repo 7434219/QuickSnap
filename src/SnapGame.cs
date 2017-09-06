@@ -2,6 +2,7 @@ using System;
 using SwinGameSDK;
 using CardGames.GameLogic;
 
+
 namespace CardGames
 {
     public class SnapGame
@@ -26,22 +27,26 @@ namespace CardGames
 			{
 				myGame.Start ();
 			}
-			
+
 			if (myGame.IsStarted)
 			{
-				if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT) && SwinGame.KeyTyped (KeyCode.vk.RSHIFT))
-				{
-					//T0D0: add sound effects
+				if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT) &&
+					SwinGame.KeyTyped (KeyCode.vk_RSHIFT)) {
+					//TODO: add sound effetc
 				}
-				else if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT))
+				else if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT)) 
+				
 				{
-				myGame.PlayerHit (0);
-				}
-				else if (SwinGame.KeyTyped (KeyCode.vkRSHIFT))
+					myGame.PlayerHit (0);
+				} 
+
+				else if (SwinGame.KeyTyped (KeyCode.vk_RSHIFT)) 
 				{
 					myGame.PlayerHit (1);
 				}
+				    
 			}
+				
 		}
 
 		/// <summary>
